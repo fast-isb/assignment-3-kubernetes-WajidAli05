@@ -2,9 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: episode1-frontend
-  namespace: episode1
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: episode1-frontend
@@ -17,4 +16,4 @@ spec:
       - name: episode1-frontend
         image: wajidali05/episode1-frontend:v1
         ports:
-        - containerPort: 80
+        - containerPort: 8080
