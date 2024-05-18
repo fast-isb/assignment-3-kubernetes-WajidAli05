@@ -1,0 +1,19 @@
+# # # mkdir -p $HOME/.kube
+# # #   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+# # #   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+# kubeadm join 192.168.0.23:6443 --token iudxe0.7i0ahvjmsjhipp4z \
+#         --discovery-token-ca-cert-hash sha256:76a91716fd9eec92aa7a2b3c4bf28a06a0a815e6b3558d015051174c489726b3
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: episode1-backend
+  namespace: episode1
+spec:
+  selector:
+    app: episode1-backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: NodePort
