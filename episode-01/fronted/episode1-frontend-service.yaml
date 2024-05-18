@@ -7,7 +7,7 @@ spec:
   selector:
     app: episode1-frontend
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
+  - protocol: TCP
+    port: 80
+    targetPort: 80
   type: NodePort
