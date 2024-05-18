@@ -1,20 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: episode1-backend
-  namespace: episode1
+  name: backend-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: episode1-backend
+      app: backend
   template:
     metadata:
       labels:
-        app: episode1-backend
+        app: backend
     spec:
       containers:
-      - name: episode1-backend
-        image: wajidali05/episode1-backend:v1
-        ports:
-        - containerPort: 80
+        - name: backend
+          image: wajidali05/episode1-backend:v1
+          ports:
+            - containerPort: 8000
