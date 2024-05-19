@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deployment
+  name: frontend-deployment4
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: frontend
+      app: frontend4
   template:
     metadata:
       labels:
-        app: frontend
+        app: frontend4
     spec:
       containers:
-        - name: frontend
-          image: wajidali05/episode1-frontend:v1
+        - name: frontend4
+          image: wajidali05/episode4-frontend:v1
           ports:
-            - containerPort: 80
+            - containerPort: 3000

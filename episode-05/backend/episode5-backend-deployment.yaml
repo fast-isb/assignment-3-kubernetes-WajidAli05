@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-deployment
+  name: backend-deployment5
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: backend5
   template:
     metadata:
       labels:
-        app: backend
+        app: backend5
     spec:
       containers:
-        - name: backend
-          image: wajidali05/episode1-backend:v1
+        - name: backend5
+          image: wajidali05/episode5-backend:v1
           ports:
             - containerPort: 8000
